@@ -1,0 +1,8 @@
+version = 1
+revision = 3
+requires-python = ">=3.10"
+
+[[package]]
+name = "leetcode-365"
+version = "0.1.0"
+source = { virtual = "." }
