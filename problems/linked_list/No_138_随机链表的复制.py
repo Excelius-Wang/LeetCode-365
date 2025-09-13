@@ -13,7 +13,7 @@ class Solution:
         if not head:
             return None
 
-        # 1️⃣ 把新节点插在原节点后面： 1 → 1' → 2 → 2' → …
+        # 把新节点插在原节点后面： 1 → 1' → 2 → 2' → …
         cur = head
         while cur:
             nxt = cur.next
@@ -21,14 +21,14 @@ class Solution:
             cur.next = copy
             cur = nxt
 
-        # 2️⃣ 给新节点的 random 赋值：copy.random = origin.random.next
+        # 给新节点的 random 赋值：copy.random = origin.random.next
         cur = head
         while cur:
             if cur.random:               # 原节点有 random
                 cur.next.random = cur.random.next
             cur = cur.next.next          # 跳过刚才插入的 copy
 
-        # 3️⃣ 把两条链表拆开，恢复原链表并拿到新链表头
+        # 把两条链表拆开，恢复原链表并拿到新链表头
         cur, new_head = head, head.next
         while cur:
             copy = cur.next
