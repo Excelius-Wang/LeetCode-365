@@ -43,4 +43,4 @@ class Solution2:
 
         slow.next = slow.next.next
 
-        return head
+        return dummy.next
